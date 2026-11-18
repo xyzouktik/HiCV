@@ -1,0 +1,196 @@
+%!TEX program = pdflatex
+%===============================================================================
+%  HiCV — Youktik Sajjan
+%  A clean, single-source curriculum vitae for Overleaf.
+%
+%  Compiler : pdfLaTeX
+%  Paper    : A4
+%  Repo     : https://github.com/xyzouktik/HiCV
+%===============================================================================
+\documentclass[10pt,a4paper]{article}
+
+% -- Page and type -------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,top=0.62in,bottom=0.62in,left=0.72in,right=0.72in,footskip=0.3in]{geometry}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+
+\definecolor{ink}{gray}{0.08}
+\definecolor{muted}{gray}{0.40}
+\definecolor{rule}{gray}{0.70}
+
+\hypersetup{
+  pdftitle={Youktik Sajjan -- Curriculum Vitae},
+  pdfauthor={Youktik Sajjan},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={Youktik Sajjan, curriculum vitae, IISER Kolkata, research, machine learning, entrepreneurship},
+  colorlinks=true,
+  linkcolor=ink,
+  urlcolor=ink,
+  citecolor=ink,
+  pdfborder={0 0 0}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\scriptsize\scshape\color{muted}Youktik Sajjan}
+\fancyfoot[R]{\scriptsize\scshape\color{muted}\thepage\ / \pageref{LastPage}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+\AtBeginDocument{\color{ink}}
+
+\setlist[itemize]{leftmargin=1.15em,itemsep=0.6pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textcolor{muted}{\textbullet}}
+
+% -- Small, readable building blocks -------------------------------------------
+\newcommand{\org}[1]{\ \textnormal{\itshape #1}}
+
+\newcommand{\cvsection}[1]{%
+  \par\vspace{9pt}%
+  \noindent{\large\scshape\bfseries #1}\par
+  \vspace{1pt}%
+  \noindent{\color{rule}\rule{\textwidth}{0.45pt}}\par
+  \vspace{2.5pt}%
+}
+
+\newcommand{\cventry}[3]{%
+  \par\vspace{3pt}%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{10pt}}>{\raggedleft\arraybackslash\small\itshape}r@{}}
+    \textbf{#1} & #2 \\
+  \end{tabularx}%
+  \par\vspace{-2pt}%
+  #3\par
+}
+
+\newcommand{\cvline}[1]{\par\vspace{1pt}\noindent #1\par}
+
+\newcommand{\skill}[2]{%
+  \par\noindent
+  \begin{tabularx}{\textwidth}{@{}>{\scshape\raggedright\arraybackslash}p{0.18\textwidth}@{\hspace{8pt}}>{\raggedright\arraybackslash}X@{}}
+    #1 & #2 \\
+  \end{tabularx}%
+  \par\vspace{-2pt}%
+}
+
+\begin{document}
+
+% -- Header --------------------------------------------------------------------
+\begin{center}
+  {\fontsize{26}{30}\selectfont\scshape Youktik Sajjan}\\[1pt]
+  {\small\scshape\color{muted}Curriculum Vitae}\\[7pt]
+  {\footnotesize
+    \href{mailto:ys22ms059@iiserkol.ac.in}{\faEnvelope\ ys22ms059@iiserkol.ac.in}%
+    \hspace{0.7em}{\color{rule}\textperiodcentered}\hspace{0.7em}%
+    \textcolor{muted}{\faMapMarkerAlt}\ Kolkata, India
+    \hspace{0.7em}{\color{rule}\textperiodcentered}\hspace{0.7em}%
+    \href{https://xyzouktik.github.io/}{\faGlobe\ xyzouktik.github.io}\\[1.5pt]
+    \href{https://www.linkedin.com/in/youktik-sajjan}{\faLinkedin\ youktik-sajjan}%
+    \hspace{0.7em}{\color{rule}\textperiodcentered}\hspace{0.7em}%
+    \href{https://github.com/xyzouktik}{\faGithub\ xyzouktik}%
+  }
+\end{center}
+\vspace{-3pt}
+
+% -- Education -----------------------------------------------------------------
+\cvsection{Education}
+\cventry{Indian Institute of Science Education and Research (IISER) Kolkata}{2022 -- 2027 (final year)}{Integrated BS--MS --- Biological Sciences major; Computer Sciences minor, Humanities minor. CGPA 7.78}
+\cventry{Barasat M.G.M H.S.}{2013 -- 2021}{Higher Secondary Education (WBCHSE) --- 97\%}
+
+% -- Research ------------------------------------------------------------------
+\cvsection{Research \& Publications}
+\cventry{Master's Thesis --- Species detection from biological imagery \org{\textperiodcentered\ IISER Kolkata}}{current}{Building hardware and a machine-learning model to detect and identify species from biological images and videos.}
+\cventry{Attention Follows Power, Not Population: Thirty Years of Political Coverage in the Indian English-Language Press}{under review, ICWSM}{}
+\cventry{AquaVision: A Trainable Iterative Refinement Loop for Underwater Image Enhancement}{accepted, IndoML}{}
+\cventry{Research Intern \org{\textperiodcentered\ Bose Institute, Kolkata}}{May -- July 2024}{%
+  \begin{itemize}
+    \item Cell-culture techniques and fundamental biological data analysis using Python.
+    \item Applied NumPy and TensorFlow to experimental data as a foundation for scientific computing.
+  \end{itemize}}
+\cventry{Research Intern \org{\textperiodcentered\ EEPC India, Kolkata}}{Internship}{Industry and economic research: data analysis, research synthesis and analytical writing.}
+
+% -- Entrepreneurship ----------------------------------------------------------
+\cvsection{Entrepreneurship \& Product}
+\cventry{Co-founder \& COO \org{\textperiodcentered\ Underwater AI}}{current}{%
+  \begin{itemize}
+    \item Computational marine imagery: real-time restoration, detection and 3D reconstruction running on the vehicle, deployed on the ABYSS-1 ROV.
+    \item Underwater robotics hardware --- prototype hardware, in-house 3D printing, and open-source drone/robotics firmware and hardware.
+    \item Operations, partnerships and field deployments; presented the technology to industry and engineering professionals.
+    \item 1st place, pitching contest --- Inter IISER--NISER Entrepreneurship Summit, IISER Tirupati (joint team).
+  \end{itemize}}
+\cventry{Co-founder, CEO / Managing Partner \org{\textperiodcentered\ iFiNN --- Intelligent Financial Neural Network}}{current}{%
+  \begin{itemize}
+    \item AI-powered quantitative finance and algorithmic-trading platform: financial analysis, strategy development, backtesting, machine-learning workflows and automated execution.
+    \item Took the concept to a working prototype. Finalist at the IIT Delhi Incubator Summit and the IIT Madras I-Summit.
+  \end{itemize}}
+
+% -- Teaching ------------------------------------------------------------------
+\cvsection{Teaching}
+\cventry{Undergraduate Teaching Assistant --- LS2102 Biophysics Laboratory \org{\textperiodcentered\ IISER Kolkata}}{Aug -- Dec 2026}{Teaching the Biophysics laboratory to sophomore students, under Dr.\ \href{https://www.iiserkol.ac.in/web/faculty-details/bidisha-sinha}{Bidisha Sinha}.}
+\cventry{Undergraduate Teaching Assistant --- CS1101 Introduction to Computer Programming \org{\textperiodcentered\ IISER Kolkata}}{Aug -- Dec 2026}{Teaching introductory computer programming to first-year students.}
+\cventry{Undergraduate Teaching Assistant --- HU3102 Philosophy \org{\textperiodcentered\ IISER Kolkata}}{Aug -- Dec 2024}{Teaching assistant for the undergraduate philosophy course, under Prof.\ \href{https://physics.iiserkol.ac.in/fac_hompage.php?did=R3VEZHFMcmdTdXlkcGcwNU1kYXhwYysxUTBnQ2l0U0pZUmZLdTUrMk9PMD0=}{Soumitra Banerjee}.}
+
+% -- Skills --------------------------------------------------------------------
+\cvsection{Technical Skills}
+{\small
+\skill{Programming}{Python (data analysis); HTML/CSS; MATLAB (basic); C++ (basic)}
+\skill{AI / ML}{NumPy, TensorFlow; computer vision; image enhancement}
+\skill{Finance / quant}{Algorithmic trading, backtesting, financial modelling, quantitative analysis}
+\skill{Scientific computing}{Experimental data analysis; PDB and UniProt for sequence and protein-structure analysis}
+\skill{Robotics / hardware}{FPV drones, UAV/UUV; Matek flight controllers, Betaflight, GPS/compass, ELRS, BLDC motors, ESCs, FPV video; embedded firmware}
+\skill{CAD / fabrication}{FreeCAD, parametric design, 3D printing (PLA), mechanical prototyping}
+\skill{Laboratory}{Immunofluorescence imaging; compound/stereozoom microscopy; Western blot; PCR; plasmid isolation; competent-cell preparation; bacterial and \textit{Drosophila} culture}
+\skill{Business / strategy}{Startup operations, product, venture-capital and investment research, event management}
+\skill{Languages}{English, Hindi, Bengali, German}
+}
+
+% -- Awards --------------------------------------------------------------------
+\cvsection{Awards \& Honors}
+\begin{itemize}
+  \item 1st place, pitching contest --- Inter IISER--NISER Entrepreneurship Summit, IISER Tirupati (joint team), with Underwater AI.
+  \item Finalist --- IIT Delhi Incubator Summit and IIT Madras I-Summit, with iFiNN.
+  \item Genesis EiR Cohort 2 support --- MeitY, Government of India, via the RISE Foundation at IISER Kolkata (Underwater AI and iFiNN).
+  \item 3rd place --- SlashDot web-design competition, IISER Kolkata, 2026.
+  \item 3rd prize --- BizPitch '26, PUYES (Presidency University Young Entrepreneurs Society).
+  \item Science Olympiad Foundation --- Zonal Gold Medal, National Science Olympiad (2018); National Silver Medal, International English Olympiad.
+  \item Nirmala Smriti Puraskar --- highest scorer in H.S. Biology.
+  \item IAT (IISER Aptitude Test) --- top 1\% nationwide; NEET --- top 1.5\% nationwide.
+\end{itemize}
+
+% -- Leadership ----------------------------------------------------------------
+\cvsection{Leadership \& Service}
+\cventry{Departmental Representative \org{\textperiodcentered\ Biological Sciences, IISER Kolkata}}{Aug 2024 -- present}{Managing class and exam activities; primary student liaison to the faculty administration.}
+\cventry{Hospitality Head (2026) \& Event Manager (2024--25) \org{\textperiodcentered\ Inquivesta XI, IISER Kolkata}}{2024 -- 2026}{%
+  \begin{itemize}
+    \item Onboarded Krafton and NoScopeGaming as official sponsors for the 2025 edition.
+    \item Overseeing guest relations and logistics for dignitaries as Hospitality Head for 2026.
+  \end{itemize}}
+\cventry{SlashDot \org{\textperiodcentered\ coding and technology club, IISER Kolkata}}{member}{Technical community, web development and competitions; 3rd place, web-design competition (2026).}
+\cventry{Volunteer \org{\textperiodcentered\ Ek Pehal, DKMS BMST}}{community}{%
+  \begin{itemize}
+    \item Taught English and Biology to underprivileged children (classes VI--IX) through the Ek Pehal programme.
+    \item Volunteered for blood stem-cell and anti-cancer awareness drives with DKMS BMST.
+  \end{itemize}}
+
+% -- Extracurricular -----------------------------------------------------------
+\cvsection{Extracurricular}
+\begin{itemize}
+  \item \textbf{Music \& band.} Trained in Hindustani classical vocal music; self-taught guitarist and bassist. Founder of the band \textbf{Mohona}, where I sing and play rhythm guitar. I also write music independently.
+  \item \textbf{Poetry \& writing.} I write poetry independently. Enthusiast of Bangla Sahitya; public speaking and science communication.
+  \item \textbf{Wildlife photography.} Photographing wildlife and natural landscapes.
+  \item \textbf{Gaming.} Long-time gamer.
+  \item \textbf{Outdoors.} Travelling, trekking and powerlifting.
+\end{itemize}
+
+\end{document}

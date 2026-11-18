@@ -1,0 +1,13 @@
+# LaTeX build artefacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
