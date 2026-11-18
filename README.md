@@ -5,7 +5,7 @@
 **A clean, Overleaf-ready LaTeX curriculum vitae.**
 One source, versioned on GitHub, typeset for print.
 
-[Portfolio](https://xyzouktik.github.io/) · [LinkedIn](https://www.linkedin.com/in/youktik-sajjan) · [GitHub](https://github.com/xyzouktik)
+[Portfolio](https://xyzouktik.github.io/) · [LinkedIn](https://www.linkedin.com/in/youktik-sajjan) · [GitHub](https://github.com/xyzouktik) · [Download PDF](https://github.com/xyzouktik/HiCV/raw/main/cv.pdf)
 
 </div>
 
