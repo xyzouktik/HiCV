@@ -13,7 +13,7 @@ One source, versioned on GitHub, typeset for print.
 
 ## Overview
 
-HiCV is the LaTeX source of my curriculum vitae. It is written for [Overleaf](https://www.overleaf.com/) and kept here so the document has a history, a home, and a single point of truth. The layout is deliberately quiet: black ink on white paper, generous margins, and a clear hierarchy that lets the work speak.
+HiCV is the LaTeX source of my curriculum vitae. It is written for [Overleaf](https://www.overleaf.com/) and black/white, clean typeset for anyone who would like to copy.
 
 The web edition remains at **[xyzouktik.github.io/cv.html](https://xyzouktik.github.io/cv.html)**.
 
